@@ -52,7 +52,7 @@ app.use(
   })
 );
 
-app.use(cookieParser());
+app.use(cookieParser()); 
 app.use(express.json());
 
 // Routes
@@ -63,9 +63,9 @@ app.use("/adminbackend/api/review", reviewRouter);
 app.use("/adminbackend/api/contact", contactRouter);
 app.use("/adminbackend/api/project", projectRouter);
 app.use("/adminbackend/api/service", serviceRouter);
-
+ 
 app.get("/adminbackend", (req, res) => {
-  res.send("Welcome to Backend");
+  res.send("Welcome to Backend"); 
 });
 
 // Error Middleware
